@@ -1,0 +1,150 @@
+// Fonts:
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+// Variables
+$bg-color: #0A0C1B;
+$container-color: #1C1938;
+$text-color: #FEFFFF;
+$text-pointed-color: #A95CD9;
+
+$inter-font: 'Inter';
+$lexen-deca-font: 'Lexend Deca';
+
+$available-width: 100%;
+
+$border: 10px;
+
+:root{
+    max-width: $available-width;
+    color: $text-color;
+    font-family: $inter-font;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: $bg-color;
+}
+
+@media (max-width: 1080px) {
+    .main-container{
+        margin: 5em 1em 5em;
+        padding-bottom: 3em;
+        background-color: $container-color;
+        border-radius: $border;
+        .img-container{
+            width: $available-width;
+            position: relative;
+            img{
+                width: $available-width;
+                border-radius: $border $border 0 0;
+                filter: opacity(30%) brightness(130%);
+            }
+        }
+    }
+    .title{
+        font-weight: 600;
+        margin: 1em 2em;
+    }
+    
+    .descriptive-text{
+        font-family: $lexen-deca-font;
+        font-size: .8em;
+        word-spacing: .3em;
+        line-height: 2em;
+        font-weight: 400;
+        margin: 1em 4em;
+    }
+    
+    .data-container{
+        .data-number{
+            margin: 1em 0 0 0;
+            font-weight: 600;
+            font-size: 1.8em;
+        }
+        .name{
+            margin: .8em;
+            font-size: .6em;
+            letter-spacing: .15em;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+    }
+    
+    strong{
+        color: $text-pointed-color;
+    }
+}
+@media (min-width: 1081px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 98vh;
+    }
+    .main-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+
+
+        margin: 2em;
+
+        background-color: $container-color;
+        border-radius: $border;
+        .img-container{
+            width: 100%;
+            height: 100%;
+            
+            margin: 0;
+
+
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 0 $border $border 0;
+                filter: opacity(30%) brightness(130%);
+            }
+        }
+    }
+    .title{
+        font-weight: 600;
+        margin: 1em 2em;
+    }
+    
+    .descriptive-text{
+        font-family: $lexen-deca-font;
+        font-size: .8em;
+        word-spacing: .3em;
+        line-height: 2em;
+        font-weight: 400;
+        margin: 1em 4em;
+    }
+    
+    .data-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .data-number{
+            margin: 1em 0 0 0;
+            font-weight: 600;
+            font-size: 1.8em;
+        }
+        .name{
+            margin: .8em;
+            font-size: .6em;
+            letter-spacing: .15em;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+    }
+    
+    strong{
+        color: $text-pointed-color;
+    }
+}
+
+
